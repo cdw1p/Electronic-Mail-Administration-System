@@ -27,7 +27,7 @@
                   <div class="login-right-wrap">
                      <h1>Masuk</h1>
                      <p class="account-subtitle">Untuk Mengakses Dashboard</p>
-                     <form action="" method="POST" autocomplete="off">
+                     <form action="{{ route('auth.submitLogin') }}" method="POST" autocomplete="off">
                         @csrf
                         @if ($message = Session::get('error'))
                           <div class="alert alert-danger" role="alert">{{ $message }}</div>
@@ -64,8 +64,6 @@
       </div>
    </div>
    <!-- /Main Wrapper -->
-   <!-- Service Worker -->
-   <script src="/assets/js/initServiceworker.js"></script>
    <!-- jQuery -->
    <script src="/assets/js/jquery-3.5.1.min.js"></script>
    <!-- Bootstrap Core JS -->

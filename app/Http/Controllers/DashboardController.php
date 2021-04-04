@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
   public function index() {
-    return 'Dashboard Page';
+    return view('dashboard/home');
   }
 
   public function logout() {
