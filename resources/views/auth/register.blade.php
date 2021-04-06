@@ -25,16 +25,17 @@
             <div class="loginbox">
                <div class="login-right">
                   <div class="login-right-wrap">
-                     <h1>Masuk</h1>
+                     <h1>Daftar Akun</h1>
                      <p class="account-subtitle">Untuk Mengakses Dashboard</p>
-                     <form action="{{ route('auth.submitLogin') }}" method="POST" autocomplete="off">
+                     <form action="{{ route('auth.submitRegister') }}" method="POST" autocomplete="off">
                         @csrf
                         @if ($message = Session::get('error'))
                           <div class="alert alert-danger" role="alert">{{ $message }}</div>
                         @endif
-                        @if ($message = Session::get('success'))
-                          <div class="alert alert-success" role="alert">{{ $message }}</div>
-                        @endif
+                        <div class="form-group">
+                           <label class="form-control-label">Nama Lengkap</label>
+                           <input name="name" type="name" class="form-control" required />
+                        </div>
                         <div class="form-group">
                            <label class="form-control-label">Alamat Email</label>
                            <input name="email" type="email" class="form-control" required />
@@ -46,20 +47,8 @@
                               <span class="fas fa-eye toggle-password"></span>
                            </div>
                         </div>
-                        <div class="form-group">
-                           <div class="row">
-                              <div class="col-6">
-                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="cb1">
-                                    <label class="custom-control-label" for="cb1">Ingat saya</label>
-                                 </div>
-                              </div>
-                              <div class="col-6 text-right">
-                              </div>
-                           </div>
-                        </div>
                         <button class="btn btn-lg btn-block btn-primary" type="submit">Submit</button>
-                        <a class="btn btn-lg btn-block btn-outline-primary" href="{{ route('auth.register') }}">Buat Akun Baru</a>
+                        <a class="btn btn-lg btn-block btn-outline-primary" href="{{ route('auth.login') }}">Kembali Login</a>
                      </form>
                   </div>
                </div>

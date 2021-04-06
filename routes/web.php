@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'role:guest'], function() {
   Route::get('/auth/login', 'AuthController@index')->name('auth.login');
   Route::post('/auth/login', 'AuthController@submitLogin')->name('auth.submitLogin');
+  Route::get('/auth/register', 'AuthController@register')->name('auth.register');
+  Route::post('/auth/register', 'AuthController@submitRegister')->name('auth.submitRegister');
 });
 
 Route::group(['middleware' => 'role:admin,user'], function() {
