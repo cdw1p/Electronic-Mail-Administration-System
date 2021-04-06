@@ -24,4 +24,14 @@ class ZoomController extends Controller
     Zoom::user()->first()->meetings()->save($meeting);
     return response()->json([ 'status' => true ]);
   }
+
+  public function deleteMeeting() {
+    $findData = Zoom::user()->first()->meetings()->find('id');
+    if ($findData) {
+      Zoom::user()->first()->meetings()->find('id')->delete();
+      return response()->json([ 'status' => true ]);
+    } else {
+      return response()->json([ 'status' => false ]);
+    }
+  }
 }
