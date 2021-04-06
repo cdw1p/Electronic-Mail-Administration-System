@@ -17,6 +17,16 @@ class ZoomController extends Controller
     return Zoom::user()->first()->meetings()->get();
   }
 
+  public function endMeeting() {
+    $findData = Zoom::user()->first()->meetings()->find('id');
+    if ($findData) {
+      Zoom::user()->first()->meetings()->find('id')->endMeeting();
+      return response()->json([ 'status' => true ]);
+    } else {
+      return response()->json([ 'status' => false ]);
+    }
+  }
+
   public function createMeeting() {
     $meeting = Zoom::meeting()->make([ 'topic' => 'Test Meeting', 'type' => 8, 'start_time' => new Carbon('2021-04-04 10:00:00') ]);
     $meeting->recurrence()->make([ 'type' => 2, 'repeat_interval' => '0', 'weekly_days' => '0', 'end_times' => '0' ]);
