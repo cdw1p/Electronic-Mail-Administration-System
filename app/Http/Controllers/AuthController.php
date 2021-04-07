@@ -46,8 +46,8 @@ class AuthController extends Controller
     } else {
       $findData = User::where('email', $request->email)->first();
       if (!$findData) {
-        User::create([ 'name' => $request->name, 'email' => $request->email, 'password' => Hash::make($request->password), 'role' => 'user' ]);
-        Session::flash('success', 'Selamat, akun anda berhasil diregistrasi!');
+        User::create([ 'name' => $request->name, 'email' => $request->email, 'password' => Hash::make($request->password), 'role' => 'user', 'status' => '0' ]);
+        Session::flash('success', 'Selamat, akun anda berhasil diregistrasi. Silahkan cek email anda untuk mengaktifkan akun!');
         return redirect()->route('auth.login');
       } else {
         Session::flash('error', 'Maaf, email sudah pernah digunakan!');
