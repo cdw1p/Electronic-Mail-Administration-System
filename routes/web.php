@@ -18,6 +18,7 @@ Route::group(['middleware' => 'role:guest'], function() {
   Route::post('/auth/login', 'AuthController@submitLogin')->name('auth.submitLogin');
   Route::get('/auth/register', 'AuthController@register')->name('auth.register');
   Route::post('/auth/register', 'AuthController@submitRegister')->name('auth.submitRegister');
+  Route::get('/auth/verify/{id}', 'AuthController@verifyToken')->name('auth.verifyToken');
 });
 
 Route::group(['middleware' => 'role:admin,user'], function() {

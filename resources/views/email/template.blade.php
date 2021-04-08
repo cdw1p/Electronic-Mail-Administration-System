@@ -9,8 +9,8 @@
 <p>
 Halo {{ $name }}, <br/><br/>
 
-Silahkan klik <a href="{{ $link }}">Aktivasi</a> untuk mengaktifkan akun anda.<br/>
-Atau buka browser kemudian paste alamat : {{ $link }}<br/><br/>
+Silahkan klik <a href="http://localhost:8000/auth/verify/{{ $link }}">Aktivasi</a> untuk mengaktifkan akun anda.<br/>
+Atau buka browser kemudian paste alamat : http://localhost:8000/auth/verify/{{ $link }}<br/><br/>
 
 Hormat kami,<br/>
 Admin Support

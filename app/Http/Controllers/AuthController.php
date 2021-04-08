@@ -50,7 +50,7 @@ class AuthController extends Controller
       $findData = User::where('email', $request->email)->first();
       if (!$findData) {
         $randomCode = Str::random(30);
-        $createUser = User::create([ 'name' => $request->name, 'email' => $request->email, 'password' => Hash::make($request->password), 'role' => 'user', 'status' => '0' ]);
+        $createUser = User::create([ 'name' => $request->name, 'email' => $request->email, 'password' => Hash::make($request->password), 'role' => 'user', 'status' => '0', 'remember_token' => $randomCode ]);
         if ($createUser) {
           Mail::to($request->email)->send(new SendMail($request->name, $randomCode));
           Session::flash('success', 'Selamat, akun anda berhasil diregistrasi. Silahkan cek email anda untuk mengaktifkan akun!');
@@ -63,6 +63,18 @@ class AuthController extends Controller
         Session::flash('error', 'Maaf, email sudah pernah digunakan!');
         return redirect()->route('auth.register');
       }
+    }
+  }
+
+  public function verifyToken(Request $request) {
+    $checkToken = User::where('status', '0')->where('remember_token', $request->id)->first();
+    if ($checkToken) {
+      User::where('remember_token', $request->id)->update([ 'status' => '1', 'remember_token' => 'null' ]);
+      Session::flash('success', 'Selamat, akun anda berhasil diaktivasi!');
+      return redirect()->route('auth.login');
+    } else {
+      Session::flash('error', 'Maaf, kode token anda telah kadaluarsa!');
+      return redirect()->route('auth.login');
     }
   }
 }
