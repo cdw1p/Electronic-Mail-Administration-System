@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
+use App\Mail\SendMail;
+use App\Models\User;
 use Validator;
 use Hash;
 use Session;
-use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -46,9 +49,16 @@ class AuthController extends Controller
     } else {
       $findData = User::where('email', $request->email)->first();
       if (!$findData) {
-        User::create([ 'name' => $request->name, 'email' => $request->email, 'password' => Hash::make($request->password), 'role' => 'user', 'status' => '0' ]);
-        Session::flash('success', 'Selamat, akun anda berhasil diregistrasi. Silahkan cek email anda untuk mengaktifkan akun!');
-        return redirect()->route('auth.login');
+        $randomCode = Str::random(30);
+        $createUser = User::create([ 'name' => $request->name, 'email' => $request->email, 'password' => Hash::make($request->password), 'role' => 'user', 'status' => '0' ]);
+        if ($createUser) {
+          Mail::to($request->email)->send(new SendMail($request->name, $randomCode));
+          Session::flash('success', 'Selamat, akun anda berhasil diregistrasi. Silahkan cek email anda untuk mengaktifkan akun!');
+          return redirect()->route('auth.login');
+        } else {
+          Session::flash('error', 'Maaf, backend server bermasalah, silahkan hubungi administrator!');
+          return redirect()->route('auth.login');
+        }
       } else {
         Session::flash('error', 'Maaf, email sudah pernah digunakan!');
         return redirect()->route('auth.register');
