@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'role:admin'], function() {
   // Room Module
   Route::post('/room/create', 'RoomController@create')->name('room.create');
+  Route::post('/room/update', 'RoomController@update')->name('room.update');
 });
 
 Route::group(['middleware' => 'role:admin,user'], function() {
