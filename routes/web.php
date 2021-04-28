@@ -24,4 +24,6 @@ Route::group(['middleware' => 'role:guest'], function() {
 Route::group(['middleware' => 'role:admin,user'], function() {
   Route::get('/', 'DashboardController@index')->name('dashboard.index');
   Route::get('/logout', 'DashboardController@logout')->name('dashboard.logout');
+  Route::get('/certificate/sign', 'CertificateController@sign')->name('certificate.sign');
+  Route::get('/certificate/check/{id}', 'CertificateController@check')->name('certificate.check');
 });
