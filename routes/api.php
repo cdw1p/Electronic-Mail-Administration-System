@@ -19,4 +19,6 @@ Route::group(['middleware' => 'role:admin,user'], function() {
   Route::get('/zoom/endMeeting', 'ZoomController@endMeeting')->name('zoom.endMeeting');
   Route::get('/zoom/createMeeting', 'ZoomController@createMeeting')->name('zoom.createMeeting');
   Route::get('/zoom/deleteMeeting', 'ZoomController@deleteMeeting')->name('zoom.deleteMeeting');
+
+  Route::get('/qrcode/generate', 'QRController@generate')->name('qr.generate');
 });
