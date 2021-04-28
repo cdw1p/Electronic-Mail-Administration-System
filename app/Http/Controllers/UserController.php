@@ -38,4 +38,23 @@ class UserController extends Controller
       return response()->json([ 'status' => false ]);
     }
   }
+
+  public function update(Request $request) {
+    $request->validate([
+      'name'      => 'required',
+      'email'     => 'required',
+      'password'  => 'required',
+      'status'    => 'required'
+    ]);
+    $updateUser = User::where('email', $request->email)->update([
+      'name'      => $request->name,
+      'password'  => Hash::make($request->password),
+      'status'    => $request->status
+    ]);
+    if ($updateUser) {
+      return response()->json([ 'status' => true ]);
+    } else {
+      return response()->json([ 'status' => false ]);
+    }
+  }
 }

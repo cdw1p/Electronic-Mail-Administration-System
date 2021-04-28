@@ -22,6 +22,7 @@ Route::group(['middleware' => 'role:admin'], function() {
 
   // User Module
   Route::get('/user/get', 'UserController@get')->name('user.get');
+  Route::post('/user/update', 'UserController@update')->name('user.update');
   Route::post('/user/create', 'UserController@create')->name('user.create');
 });
 
