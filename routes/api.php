@@ -21,7 +21,8 @@ Route::group(['middleware' => 'role:admin'], function() {
   Route::post('/room/delete', 'RoomController@delete')->name('room.delete');
 
   // User Module
-  Route::get('/user/get', 'RoomController@get')->name('user.get');
+  Route::get('/user/get', 'UserController@get')->name('user.get');
+  Route::post('/user/create', 'UserController@create')->name('user.create');
 });
 
 Route::group(['middleware' => 'role:admin,user'], function() {
