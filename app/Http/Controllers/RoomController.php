@@ -7,6 +7,14 @@ use App\Models\Room;
 
 class RoomController extends Controller
 {
+  public function get(Request $request) {
+    $getRoom = Room::paginate(15);
+    if ($getRoom) {
+      return response()->json([ 'status' => true, 'data' => $getRoom ]);
+    } else {
+      return response()->json([ 'status' => false ]);
+    }
+  }
   public function create(Request $request) {
     $request->validate([
       'name'                => 'required',

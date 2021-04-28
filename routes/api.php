@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'role:admin'], function() {
   // Room Module
+  Route::get('/room/get', 'RoomController@get')->name('room.get');
   Route::post('/room/create', 'RoomController@create')->name('room.create');
   Route::post('/room/update', 'RoomController@update')->name('room.update');
   Route::post('/room/delete', 'RoomController@delete')->name('room.delete');
