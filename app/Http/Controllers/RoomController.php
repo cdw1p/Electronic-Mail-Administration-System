@@ -15,6 +15,7 @@ class RoomController extends Controller
       return response()->json([ 'status' => false ]);
     }
   }
+
   public function create(Request $request) {
     $request->validate([
       'name'                => 'required',
