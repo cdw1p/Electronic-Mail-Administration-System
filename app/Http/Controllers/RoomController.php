@@ -42,4 +42,16 @@ class RoomController extends Controller
       return response()->json([ 'status' => false ]);
     }
   }
+
+  public function delete(Request $request) {
+    $request->validate([
+      'id_rooms'            => 'required',
+    ]);
+    $deleteRoom = Room::where('id_rooms', $request->id_rooms)->delete();
+    if ($deleteRoom) {
+      return response()->json([ 'status' => true ]);
+    } else {
+      return response()->json([ 'status' => false ]);
+    }
+  }
 }
