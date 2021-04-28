@@ -57,4 +57,16 @@ class UserController extends Controller
       return response()->json([ 'status' => false ]);
     }
   }
+
+  public function delete(Request $request) {
+    $request->validate([
+      'email'     => 'required',
+    ]);
+    $deleteUser = User::where('email', $request->email)->delete();
+    if ($deleteUser) {
+      return response()->json([ 'status' => true ]);
+    } else {
+      return response()->json([ 'status' => false ]);
+    }
+  }
 }
