@@ -21,4 +21,7 @@ Route::group(['middleware' => 'role:admin,user'], function() {
   Route::get('/zoom/deleteMeeting', 'ZoomController@deleteMeeting')->name('zoom.deleteMeeting');
 
   Route::get('/qrcode/generate', 'QRController@generate')->name('qr.generate');
+
+  Route::get('/certificate/sign', 'CertificateController@sign')->name('certificate.sign');
+  Route::get('/certificate/check/{id}', 'CertificateController@check')->name('certificate.check');
 });
