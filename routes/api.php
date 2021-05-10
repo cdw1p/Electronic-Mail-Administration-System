@@ -2,18 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
-
-Route::group(['middleware' => 'role:admin'], function() {
+// Route::group([ 'middleware' => ['auth:sanctum'] ], function() {
   // Room Module
   Route::get('/room/get', 'RoomController@get')->name('room.get');
   Route::post('/room/create', 'RoomController@create')->name('room.create');
@@ -25,9 +14,7 @@ Route::group(['middleware' => 'role:admin'], function() {
   Route::post('/user/update', 'UserController@update')->name('user.update');
   Route::post('/user/create', 'UserController@create')->name('user.create');
   Route::post('/user/delete', 'UserController@delete')->name('user.delete');
-});
 
-Route::group(['middleware' => 'role:admin,user'], function() {
   // Zoom Module
   Route::get('/zoom/getUser', 'ZoomController@getUser')->name('zoom.getUser');
   Route::get('/zoom/getMeeting', 'ZoomController@getMeeting')->name('zoom.getMeeting');
@@ -36,9 +23,9 @@ Route::group(['middleware' => 'role:admin,user'], function() {
   Route::get('/zoom/deleteMeeting', 'ZoomController@deleteMeeting')->name('zoom.deleteMeeting');
 
   // QRCode Module
-  Route::get('/qrcode/generate', 'QRController@generate')->name('qr.generate');
+  Route::get('/qrcode/generate', 'QRController@generate')->name('qrcode.generate');
 
   // Certificate Module
   Route::get('/certificate/sign', 'CertificateController@sign')->name('certificate.sign');
   Route::get('/certificate/check/{id}', 'CertificateController@check')->name('certificate.check');
-});
+// });
