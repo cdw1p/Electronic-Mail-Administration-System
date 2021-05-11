@@ -11,6 +11,13 @@ we love Stisla Admin Template and Laravel 8 let's make them love each other.
 
 Include simple Data Table with Livewire (CRUD).
 
+## Features?
+- [ ] Auto generate QR Code For Mutiple Digital Signature
+- [ ] Meeting Scheduling, Sending Invitation, and The Presence of The Invitation
+- [ ] Incoming Mail Registration with Feedback Status
+- [ ] Outgoing Mail Registration with Progress Notification Status
+- [ ] Integrated Video Meeting with Recording and Controlling System
+
 ## What next?
 After clone or download this repository, next step is install all dependency required by laravel and laravel-mix.
 
