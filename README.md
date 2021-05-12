@@ -18,6 +18,11 @@ Include simple Data Table with Livewire (CRUD).
 - [ ] Outgoing Mail Registration with Progress Notification Status
 - [ ] Integrated Video Meeting with Recording and Controlling System
 
+## Framework & Tools ?
+- Laravel (Backend)
+- Inertia.js (Frontend)
+- MySQL (Database)
+
 ## What next?
 After clone or download this repository, next step is install all dependency required by laravel and laravel-mix.
 
