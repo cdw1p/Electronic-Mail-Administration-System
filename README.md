@@ -21,11 +21,11 @@ Include simple Data Table with Livewire (CRUD).
 ### A. Input
 | Description | Progress | Complete |
 | --- | --- | --- |
-| Admin Dapat Mengelola Akun Pengguna | 0% | ✖️ |
-| Admin Dapat Melihat Data Meeting | 0% | ✖️ |
-| Admin Dapat Membuat Room Meeting | 0% | ✖️ |
-| Admin Dapat Memulai Room Meeting | 0% | ✖️ |
-| Admin Dapat Memberhentikan Room Meeting | 0% | ✖️ |
+| Admin Dapat Mengelola Akun Pengguna | 50% | ✖️ |
+| Admin Dapat Melihat Data Meeting | 50% | ✖️ |
+| Admin Dapat Membuat Room Meeting | 50% | ✖️ |
+| Admin Dapat Memulai Room Meeting | 50% | ✖️ |
+| Admin Dapat Memberhentikan Room Meeting | 50% | ✖️ |
 | Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 0% | ✖️ |
 | User Dapat Bergabung Ke Room Meeting | 0% | ✖️ |
 | User Dapat Melihat Riwayat Meeting | 0% | ✖️ |
@@ -49,7 +49,7 @@ Include simple Data Table with Livewire (CRUD).
 | --- | --- | --- |
 | Sistem Dapat Mengirim Notifikasi Absensi Ke User Yang Bersangkutan Melalui Email | 0% | ✖️ |
 | Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 0% | ✖️ |
-| Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 0% | ✖️ |
+| Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 100% | ✔️ |
 | Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 0% | ✖️ |
 | Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 0% | ✖️ |
 | Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 0% | ✖️ |
@@ -57,11 +57,11 @@ Include simple Data Table with Livewire (CRUD).
 ### C. Process
 | Description | Progress | Complete |
 | --- | --- | --- |
-| Menyediakan Proses Registrasi | 0% | ✖️ |
-| Menyediakan Proses Login | 0% | ✖️ |
-| Menyediakan Proses Logout | 0% | ✖️ |
+| Menyediakan Proses Registrasi | 100% | ✔️ |
+| Menyediakan Proses Login | 100% | ✔️ |
+| Menyediakan Proses Logout | 100% | ✔️ |
 | Menyediakan Proses Presensi | 0% | ✖️ |
-| Menyediakan Proses Video Meeting | 0% | ✖️ |
+| Menyediakan Proses Video Meeting | 30% | ✖️ |
 
 ## Framework & Tools ?
 - Laravel (Backend)
