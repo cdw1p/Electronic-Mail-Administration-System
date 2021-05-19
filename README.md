@@ -30,9 +30,9 @@ Include simple Data Table with Livewire (CRUD).
 | User Dapat Bergabung Ke Room Meeting | 0% | ✖️ |
 | User Dapat Melihat Riwayat Meeting | 0% | ✖️ |
 | User Dapat Melakukan Absensi Sebagai Penanda Kehadiran Mengikuti Meeting | 0% | ✖️ |
-| User Dapat Mencetak E-Sertifikat Sebagai Bukti Kehadiran | 0% | ✖️ |
-| User Dapat Merubah Informasi Akun | 0% | ✖️ |
-| User Dapat Melakukan Registrasi Online | 0% | ✖️ |
+| User Dapat Mencetak E-Sertifikat Sebagai Bukti Kehadiran | 25% | ✖️ |
+| User Dapat Merubah Informasi Akun | 100% | ✖️ |
+| User Dapat Melakukan Registrasi Online | 100% | ✔️ |
 
 ### B. Output
 | Description | Progress | Complete |
@@ -41,8 +41,8 @@ Include simple Data Table with Livewire (CRUD).
 | Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 0% | ✖️ |
 | Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 100% | ✔️ |
 | Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 0% | ✖️ |
-| Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 0% | ✖️ |
-| Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 0% | ✖️ |
+| Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 30% | ✖️ |
+| Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 70% | ✖️ |
 
 ### C. Process
 | Description | Progress | Complete |
