@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
   // Zoom Module
   Route::get('/zoom/getUser', 'ZoomController@getUser')->name('zoom.getUser');
   Route::get('/zoom/getMeeting', 'ZoomController@getMeeting')->name('zoom.getMeeting');
-  Route::get('/zoom/endMeeting', 'ZoomController@endMeeting')->name('zoom.endMeeting');
   Route::get('/zoom/createMeeting', 'ZoomController@createMeeting')->name('zoom.createMeeting');
-  Route::get('/zoom/deleteMeeting', 'ZoomController@deleteMeeting')->name('zoom.deleteMeeting');
+  Route::get('/zoom/endMeeting/{id}', 'ZoomController@endMeeting')->name('zoom.endMeeting');
+  Route::get('/zoom/deleteMeeting/{id}', 'ZoomController@deleteMeeting')->name('zoom.deleteMeeting');
 
   // QRCode Module
   Route::get('/qrcode/generate', 'QRController@generate')->name('qrcode.generate');
