@@ -27,11 +27,11 @@ Include simple Data Table with Livewire (CRUD).
 | Admin Dapat Memulai Room Meeting | 50% | ✖️ |
 | Admin Dapat Memberhentikan Room Meeting | 50% | ✖️ |
 | Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 0% | ✖️ |
-| User Dapat Bergabung Ke Room Meeting | 0% | ✖️ |
+| User Dapat Bergabung Ke Room Meeting | 40% | ✖️ |
 | User Dapat Melihat Riwayat Meeting | 0% | ✖️ |
 | User Dapat Melakukan Absensi Sebagai Penanda Kehadiran Mengikuti Meeting | 0% | ✖️ |
 | User Dapat Mencetak E-Sertifikat Sebagai Bukti Kehadiran | 25% | ✖️ |
-| User Dapat Merubah Informasi Akun | 100% | ✖️ |
+| User Dapat Merubah Informasi Akun | 100% | ✔️ |
 | User Dapat Melakukan Registrasi Online | 100% | ✔️ |
 
 ### B. Output
@@ -50,7 +50,7 @@ Include simple Data Table with Livewire (CRUD).
 | Menyediakan Proses Registrasi | 100% | ✔️ |
 | Menyediakan Proses Login | 100% | ✔️ |
 | Menyediakan Proses Logout | 100% | ✔️ |
-| Menyediakan Proses Presensi | 0% | ✖️ |
+| Menyediakan Proses Presensi | 10% | ✖️ |
 | Menyediakan Proses Video Meeting | 30% | ✖️ |
 
 ## Framework & Tools ?
