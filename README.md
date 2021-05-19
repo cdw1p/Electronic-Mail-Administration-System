@@ -39,16 +39,6 @@ Include simple Data Table with Livewire (CRUD).
 | --- | --- | --- |
 | Sistem Dapat Mengirim Notifikasi Absensi Ke User Yang Bersangkutan Melalui Email | 0% | ✖️ |
 | Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 0% | ✖️ |
-| Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 0% | ✖️ |
-| Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 0% | ✖️ |
-| Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 0% | ✖️ |
-| Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 0% | ✖️ |
-
-### B. Output
-| Description | Progress | Complete |
-| --- | --- | --- |
-| Sistem Dapat Mengirim Notifikasi Absensi Ke User Yang Bersangkutan Melalui Email | 0% | ✖️ |
-| Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 0% | ✖️ |
 | Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 100% | ✔️ |
 | Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 0% | ✖️ |
 | Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 0% | ✖️ |
