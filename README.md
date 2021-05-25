@@ -21,16 +21,16 @@ Include simple Data Table with Livewire (CRUD).
 ### A. Input
 | Description | Progress | Complete |
 | --- | --- | --- |
-| Admin Dapat Mengelola Akun Pengguna | 50% | ✖️ |
-| Admin Dapat Melihat Data Meeting | 50% | ✖️ |
-| Admin Dapat Membuat Room Meeting | 50% | ✖️ |
-| Admin Dapat Memulai Room Meeting | 50% | ✖️ |
-| Admin Dapat Memberhentikan Room Meeting | 50% | ✖️ |
+| Admin Dapat Mengelola Akun Pengguna | 60% | ✖️ |
+| Admin Dapat Melihat Data Meeting | 60% | ✖️ |
+| Admin Dapat Membuat Room Meeting | 60% | ✖️ |
+| Admin Dapat Memulai Room Meeting | 60% | ✖️ |
+| Admin Dapat Memberhentikan Room Meeting | 60% | ✖️ |
 | Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 0% | ✖️ |
-| User Dapat Bergabung Ke Room Meeting | 40% | ✖️ |
+| User Dapat Bergabung Ke Room Meeting | 50% | ✖️ |
 | User Dapat Melihat Riwayat Meeting | 0% | ✖️ |
 | User Dapat Melakukan Absensi Sebagai Penanda Kehadiran Mengikuti Meeting | 0% | ✖️ |
-| User Dapat Mencetak E-Sertifikat Sebagai Bukti Kehadiran | 25% | ✖️ |
+| User Dapat Mencetak E-Sertifikat Sebagai Bukti Kehadiran | 30% | ✖️ |
 | User Dapat Merubah Informasi Akun | 100% | ✔️ |
 | User Dapat Melakukan Registrasi Online | 100% | ✔️ |
 
@@ -41,7 +41,7 @@ Include simple Data Table with Livewire (CRUD).
 | Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 0% | ✖️ |
 | Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 100% | ✔️ |
 | Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 0% | ✖️ |
-| Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 30% | ✖️ |
+| Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 35% | ✖️ |
 | Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 70% | ✖️ |
 
 ### C. Process
@@ -50,8 +50,8 @@ Include simple Data Table with Livewire (CRUD).
 | Menyediakan Proses Registrasi | 100% | ✔️ |
 | Menyediakan Proses Login | 100% | ✔️ |
 | Menyediakan Proses Logout | 100% | ✔️ |
-| Menyediakan Proses Presensi | 10% | ✖️ |
-| Menyediakan Proses Video Meeting | 30% | ✖️ |
+| Menyediakan Proses Presensi | 15% | ✖️ |
+| Menyediakan Proses Video Meeting | 35% | ✖️ |
 
 ## Framework & Tools ?
 - Laravel (Backend)
