@@ -26,9 +26,9 @@ Include simple Data Table with Livewire (CRUD).
 | Admin Dapat Membuat Room Meeting | 60% | ✖️ |
 | Admin Dapat Memulai Room Meeting | 60% | ✖️ |
 | Admin Dapat Memberhentikan Room Meeting | 60% | ✖️ |
-| Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 0% | ✖️ |
-| User Dapat Bergabung Ke Room Meeting | 50% | ✖️ |
-| User Dapat Melihat Riwayat Meeting | 0% | ✖️ |
+| Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 10% | ✖️ |
+| User Dapat Bergabung Ke Room Meeting | 60% | ✖️ |
+| User Dapat Melihat Riwayat Meeting | 10% | ✖️ |
 | User Dapat Melakukan Absensi Sebagai Penanda Kehadiran Mengikuti Meeting | 0% | ✖️ |
 | User Dapat Mencetak E-Sertifikat Sebagai Bukti Kehadiran | 30% | ✖️ |
 | User Dapat Merubah Informasi Akun | 100% | ✔️ |
