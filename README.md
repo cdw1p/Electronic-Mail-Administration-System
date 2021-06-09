@@ -37,12 +37,12 @@ Include simple Data Table with Livewire (CRUD).
 ### B. Output
 | Description | Progress | Complete |
 | --- | --- | --- |
-| Sistem Dapat Mengirim Notifikasi Absensi Ke User Yang Bersangkutan Melalui Email | 0% | ✖️ |
-| Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 0% | ✖️ |
+| Sistem Dapat Mengirim Notifikasi Absensi Ke User Yang Bersangkutan Melalui Email | 30% | ✖️ |
+| Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 30% | ✖️ |
 | Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 100% | ✔️ |
-| Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 0% | ✖️ |
-| Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 35% | ✖️ |
-| Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 70% | ✖️ |
+| Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 30% | ✖️ |
+| Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 60% | ✖️ |
+| Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 80% | ✖️ |
 
 ### C. Process
 | Description | Progress | Complete |
@@ -50,8 +50,8 @@ Include simple Data Table with Livewire (CRUD).
 | Menyediakan Proses Registrasi | 100% | ✔️ |
 | Menyediakan Proses Login | 100% | ✔️ |
 | Menyediakan Proses Logout | 100% | ✔️ |
-| Menyediakan Proses Presensi | 15% | ✖️ |
-| Menyediakan Proses Video Meeting | 35% | ✖️ |
+| Menyediakan Proses Presensi | 25% | ✖️ |
+| Menyediakan Proses Video Meeting | 55% | ✖️ |
 
 ## Framework & Tools ?
 - Laravel (Backend)
