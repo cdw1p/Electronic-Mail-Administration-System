@@ -35,7 +35,8 @@
       </a>
       &nbsp;
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="{{ route('dashboard.logout') }}"><i data-feather="log-out" class="mr-1"></i> Keluar</a>
+        <a class="dropdown-item" href="{{ route('profile.index') }}"><i class="mr-1"></i> Ubah Profile</a>
+        <a class="dropdown-item" href="{{ route('dashboard.logout') }}"><i class="mr-1"></i> Keluar</a>
       </div>
     </li>
     <!-- /User Menu -->
