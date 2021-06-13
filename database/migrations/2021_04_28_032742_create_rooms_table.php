@@ -21,8 +21,6 @@ class CreateRoomsTable extends Migration
             $table->bigInteger('is_recording');
             $table->bigInteger('is_start_meeting');
             $table->bigInteger('is_join_before_host');
-            $table->string('zoom_id');
-            $table->string('zoom_link');
             $table->timestamps();
         });
     }
