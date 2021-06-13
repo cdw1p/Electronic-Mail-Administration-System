@@ -26,6 +26,10 @@ Route::group(['middleware' => 'role:user'], function() {
   // Modul Dashboard
   Route::get('/', 'DashboardController@index')->name('dashboard.index');
   Route::get('/logout', 'DashboardController@logout')->name('dashboard.logout');
+
+  // Modul Profile
+  Route::get('/profile', 'ProfileController@index')->name('profile.index');
+  Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
 });
 
 Route::group(['middleware' => 'role:admin'], function() {
