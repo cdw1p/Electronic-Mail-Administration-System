@@ -22,11 +22,13 @@ Route::group(['middleware' => 'role:guest'], function() {
   Route::get('/auth/verify/{id}', 'AuthController@verifyToken')->name('auth.verifyToken');
 });
 
-Route::group(['middleware' => 'role:admin,user'], function() {
+Route::group(['middleware' => 'role:user'], function() {
   // Modul Dashboard
   Route::get('/', 'DashboardController@index')->name('dashboard.index');
   Route::get('/logout', 'DashboardController@logout')->name('dashboard.logout');
+});
 
+Route::group(['middleware' => 'role:admin'], function() {
   // Modul Users Management
   Route::get('/settings/users', 'SettingsUsersControllers@index')->name('settings.users.index');
   Route::get('/settings/users/create', 'SettingsUsersControllers@create')->name('settings.users.create');
