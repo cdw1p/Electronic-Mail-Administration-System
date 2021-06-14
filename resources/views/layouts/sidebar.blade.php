@@ -13,9 +13,8 @@
 
             <li class="menu-title"><span>Pengaturan</span></li>
             <li {{ request()->routeIs('settings.users.index') ? 'class=active' : '' }}><a href="/settings/users"><i class="fa fa-users"></i> <span>Master Pengguna</span></a></li>
-            <li><a href="#"><i class="fa fa-envelope"></i> <span>Master SMTP</span></a></li>
-            <li><a href="#"><i class="fa fa-video"></i> <span>Master Vidcon</span></a></li>
-          @endif      
+            <li {{ request()->routeIs('settings.app.index') ? 'class=active' : '' }}><a href="/settings/app"><i class="fa fa-cog"></i> <span>Master Aplikasi</span></a></li>
+          @endif
         </ul>
       </div>
    </div>
