@@ -17,7 +17,7 @@ class Room extends Model
     protected $fillable = [
         'name',
         'start_date',
-        'end_date',
+        'is_duration',
         'is_recording',
         'is_start_meeting',
         'is_join_before_host',

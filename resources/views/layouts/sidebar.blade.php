@@ -7,7 +7,7 @@
 
           @if (Auth::user()->role === 'admin')
             <li class="menu-title"><span>Modul Meeting</span></li>
-            <li><a href="#"><i class="fa fa-calendar"></i> <span>Atur Jadwal</span></a></li>
+            <li {{ request()->routeIs('meeting.schedule.index') ? 'class=active' : '' }}><a href="/meeting/schedule"><i class="fa fa-calendar"></i> <span>Atur Jadwal</span></a></li>
             <li><a href="#"><i class="fa fa-user-plus"></i> <span>Undangan</span></a></li>
             <li><a href="#"><i class="fa fa-clock"></i> <span>Presensi</span></a></li>
 

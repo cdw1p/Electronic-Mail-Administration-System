@@ -17,7 +17,7 @@ class CreateRoomsTable extends Migration
             $table->id('id_rooms');
             $table->string('name');
             $table->string('start_date');
-            $table->string('end_date');
+            $table->string('is_duration');
             $table->string('zoom_id');
             $table->string('zoom_link');
             $table->bigInteger('is_recording');
