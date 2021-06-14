@@ -84,6 +84,7 @@
                           <td class="text-center">
                             <a href="/meeting/schedule/edit/{{ $v->zoom_id }}" class="btn btn-sm btn-white text-success mr-2"><i class="far fa-edit mr-1"></i>Ubah</a> 
                             <a href="/meeting/schedule/delete/{{ $v->zoom_id }}" class="btn btn-sm btn-white text-danger mr-2"><i class="far fa-trash-alt mr-1"></i>Hapus</a>
+                            <a href="/meeting/schedule/stop/{{ $v->zoom_id }}" class="btn btn-sm btn-white text-danger mr-2"><i class="fa fa-stop mr-1"></i>Stop</a>
                           </td>
                       </tr>
                     @endforeach

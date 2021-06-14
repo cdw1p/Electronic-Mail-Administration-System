@@ -39,6 +39,7 @@ Route::group(['middleware' => 'role:admin'], function() {
   Route::post('/meeting/schedule/create', 'RoomController@store')->name('meeting.schedule.store');
   Route::get('/meeting/schedule/edit/{id}', 'RoomController@edit')->name('meeting.schedule.edit');
   Route::post('/meeting/schedule/edit/{id}', 'RoomController@update')->name('meeting.schedule.update');
+  Route::get('/meeting/schedule/stop/{id}', 'RoomController@stop')->name('meeting.schedule.stop');
   Route::get('/meeting/schedule/delete/{id}', 'RoomController@delete')->name('meeting.schedule.delete');
 
   // Modul Users Management

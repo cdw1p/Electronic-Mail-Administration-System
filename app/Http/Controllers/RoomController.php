@@ -60,11 +60,26 @@ class RoomController extends Controller
   public function update(Request $request) {
     $findData = Zoom::user()->first()->meetings()->find($request->id);
     if ($findData) {
+      if (!($request->is_start_meeting)) {
+        Zoom::user()->first()->meetings()->find($request->id)->endMeeting();
+      }
       Zoom::user()->first()->meetings()->find($request->id)->update([ 'topic' => $request->name ]);
       Room::where('zoom_id', $request->id)->update($request->except(['_token']));
       Session::flash('success', 'Selamat, data meeting berhasil diubah pada database server!');
     } else {
       Session::flash('error', 'Maaf, data meeting tidak dapat diubah. Silahkan coba lagi!');
+    }
+    return redirect()->route('meeting.schedule.index');
+  }
+
+  public function stop(Request $request) {
+    $findData = Zoom::user()->first()->meetings()->find($request->id);
+    if ($findData) {
+      Zoom::user()->first()->meetings()->find($request->id)->endMeeting();
+      Room::where('zoom_id', $request->id)->update([ 'is_start_meeting' => 0 ]);
+      Session::flash('success', 'Selamat, data meeting berhasil diberhentikan pada server!');
+    } else {
+      Session::flash('error', 'Maaf, data meeting tidak dapat diberhentikan. Silahkan coba lagi!');
     }
     return redirect()->route('meeting.schedule.index');
   }
