@@ -22,14 +22,14 @@
             <div class="col">
               <h3 class="page-title">Ubah Data Pengguna</h3>
               <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Dashboard</a>
-                <li class="breadcrumb-item"><a href="/">Pengaturan</a>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Dashboard</a>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Pengaturan</a>
                 </li>
                 <li class="breadcrumb-item active">Master Pengguna</li>
               </ul>
             </div>
             <div class="col-auto">
-              <a class="btn btn-primary filter-btn" href="/settings/users">
+              <a class="btn btn-primary filter-btn" href="{{ route('settings.users.index') }}">
                 <i class="fas fa-arrow-left"></i>
               </a>
             </div>

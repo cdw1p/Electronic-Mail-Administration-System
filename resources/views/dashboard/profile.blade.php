@@ -22,13 +22,13 @@
             <div class="col">
               <h3 class="page-title">Ubah Profile</h3>
               <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Dashboard</a>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item active">Ubah Profile</li>
               </ul>
             </div>
             <div class="col-auto">
-              <a class="btn btn-primary filter-btn" href="/">
+              <a class="btn btn-primary filter-btn" href="{{ route('dashboard.index') }}">
                 <i class="fas fa-arrow-left"></i>
               </a>
             </div>

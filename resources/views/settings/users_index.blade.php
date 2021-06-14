@@ -22,14 +22,14 @@
             <div class="col">
               <h3 class="page-title">Master Pengguna</h3>
               <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Dashboard</a>
-                <li class="breadcrumb-item"><a href="/">Pengaturan</a>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Dashboard</a>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Pengaturan</a>
                 </li>
                 <li class="breadcrumb-item active">Master Pengguna</li>
               </ul>
             </div>
             <div class="col-auto">
-              <a href="/settings/users/create" class="btn btn-primary mr-1">
+              <a href="{{ route('settings.users.create') }}" class="btn btn-primary mr-1">
                 <i class="fas fa-plus"></i>
               </a>
             </div>
@@ -74,8 +74,8 @@
                             @endif
                           </td>
                           <td class="text-center">
-                            <a href="/settings/users/edit/{{ $v->email }}" class="btn btn-sm btn-white text-success mr-2"><i class="far fa-edit mr-1"></i>Ubah</a> 
-                            <a href="/settings/users/delete/{{ $v->email }}" class="btn btn-sm btn-white text-danger mr-2"><i class="far fa-trash-alt mr-1"></i>Hapus</a>
+                            <a href="{{ route('settings.users.edit', $v->email) }}" class="btn btn-sm btn-white text-success mr-2"><i class="far fa-edit mr-1"></i>Ubah</a> 
+                            <a href="{{ route('settings.users.delete', $v->email) }}" class="btn btn-sm btn-white text-danger mr-2"><i class="far fa-trash-alt mr-1"></i>Hapus</a>
                           </td>
                       </tr>
                     @endforeach

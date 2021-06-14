@@ -20,16 +20,16 @@
         <div class="page-header">
           <div class="row align-items-center">
             <div class="col">
-              <h3 class="page-title">Tambah Jadwal</h3>
+              <h3 class="page-title">Ubah Jadwal</h3>
               <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Dashboard</a>
-                <li class="breadcrumb-item"><a href="/">Meeting</a>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Dashboard</a>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Meeting</a>
                 </li>
-                <li class="breadcrumb-item active">Tambah Jadwal</li>
+                <li class="breadcrumb-item active">Ubah Jadwal</li>
               </ul>
             </div>
             <div class="col-auto">
-              <a class="btn btn-primary filter-btn" href="/meeting/schedule">
+              <a class="btn btn-primary filter-btn" href="{{ route('meeting.schedule.index') }}">
                 <i class="fas fa-arrow-left"></i>
               </a>
             </div>
@@ -48,26 +48,19 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Nama Meeting</label>
-                          <input type="text" class="form-control" id="name" name="name" required />
+                          <input type="text" class="form-control" id="name" name="name" value="{{ $data->name }}" required />
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Waktu Dimulai</label>
-                          <input type="datetime-local" class="form-control" id="start_date" name="start_date" required />
+                          <input type="text" class="form-control" value="{{ $data->start_date }}" required readonly />
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Durasi Zoom</label>
-													<select class="form-control" id="is_duration" name="is_duration">
-														<option value="60">60 Menit</option>
-														<option value="45">45 Menit</option>
-														<option value="30">30 Menit</option>
-														<option value="20">20 Menit</option>
-														<option value="10">10 Menit</option>
-														<option value="5">5 Menit</option>
-													</select>
+                          <input type="text" class="form-control" value="{{ $data->is_duration }} Menit" required readonly />
                         </div>
                       </div>
                     </div>
@@ -76,8 +69,8 @@
 												<div class="form-group">
 													<label>Status Meeting</label>
 													<select class="form-control" id="is_start_meeting" name="is_start_meeting">
-														<option value="1">Aktif</option>
-														<option value="0">Tidak Aktif</option>
+														<option value="1" {{ ($data->is_start_meeting) ? 'selected' : '' }}>Aktif</option>
+														<option value="0" {{ ($data->is_start_meeting) ? '' : 'selected' }}>Tidak Aktif</option>
 													</select>
 												</div>
 											</div>
@@ -85,8 +78,8 @@
 												<div class="form-group">
 													<label>Status Rekaman</label>
 													<select class="form-control" id="is_recording" name="is_recording">
-														<option value="1">Aktif</option>
-														<option value="0">Tidak Aktif</option>
+														<option value="1" {{ ($data->is_recording) ? 'selected' : '' }}>Aktif</option>
+														<option value="0" {{ ($data->is_recording) ? '' : 'selected' }}>Tidak Aktif</option>
 													</select>
 												</div>
 											</div>

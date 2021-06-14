@@ -22,8 +22,8 @@
             <div class="col">
               <h3 class="page-title">Master Aplikasi</h3>
               <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Dashboard</a>
-                <li class="breadcrumb-item"><a href="/">Pengaturan</a>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Dashboard</a>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Pengaturan</a>
                 </li>
                 <li class="breadcrumb-item active">Master Aplikasi</li>
               </ul>

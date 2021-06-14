@@ -11,17 +11,17 @@ use Session;
 class MeetingScheduleController extends Controller
 {
   public function index(Request $request) {
-    return view('meeting/room_index', ['data' => Room::all()]);
+    return view('meeting/schedule_index', ['data' => Room::all()]);
   }
 
   public function create(Request $request) {
-    return view('meeting/room_create');
+    return view('meeting/schedule_create');
   }
 
   public function edit(Request $request) {
     $findData = Room::where('zoom_id', $request->id)->first();
     if ($findData) {
-      return view('meeting/room_edit', ['data' => $findData]);
+      return view('meeting/schedule_edit', ['data' => $findData]);
     } else {
       return redirect()->route('meeting.schedule.index');
     }
