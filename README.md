@@ -1,15 +1,5 @@
-# Laravel 8 + Stisla + Jetstream + Livewire
-we love Stisla Admin Template and Laravel 8 let's make them love each other.
-
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/nyancodeid/laravel-8-stisla-jetstream/issues)
-
-## What inside?
-- Laravel ^8.5 - [laravel.com/docs/8.x](https://laravel.com/docs/8.x)
-- Laravel Jetstream ^1.2 - [jetstream.laravel.com](https://jetstream.laravel.com/)
-- Livewire ^2.0 - [laravel-livewire.com](https://laravel-livewire.com)
-- Stisla Admin Template ^2.3.0 - [getstisla.com](https://getstisla.com/)
-
-Include simple Data Table with Livewire (CRUD).
+#  Electronic Mail Administration System
+Electronic Mail Administration System - Tugas UAS PTW
 
 ## Features?
 - [ ] Auto generate QR Code For Mutiple Digital Signature
@@ -21,14 +11,14 @@ Include simple Data Table with Livewire (CRUD).
 ### A. Input
 | Description | Progress | Complete |
 | --- | --- | --- |
-| Admin Dapat Mengelola Akun Pengguna | 60% | ✖️ |
-| Admin Dapat Melihat Data Meeting | 60% | ✖️ |
-| Admin Dapat Membuat Room Meeting | 60% | ✖️ |
-| Admin Dapat Memulai Room Meeting | 60% | ✖️ |
-| Admin Dapat Memberhentikan Room Meeting | 60% | ✖️ |
+| Admin Dapat Mengelola Akun Pengguna | 100% | ✖️ |
+| Admin Dapat Melihat Data Meeting | 100% | ✖️ |
+| Admin Dapat Membuat Room Meeting | 100% | ✖️ |
+| Admin Dapat Memulai Room Meeting | 100% | ✖️ |
+| Admin Dapat Memberhentikan Room Meeting |10060% | ✖️ |
 | Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 10% | ✖️ |
 | User Dapat Bergabung Ke Room Meeting | 60% | ✖️ |
-| User Dapat Melihat Riwayat Meeting | 10% | ✖️ |
+| User Dapat Melihat Riwayat Meeting | 50% | ✖️ |
 | User Dapat Melakukan Absensi Sebagai Penanda Kehadiran Mengikuti Meeting | 0% | ✖️ |
 | User Dapat Mencetak E-Sertifikat Sebagai Bukti Kehadiran | 30% | ✖️ |
 | User Dapat Merubah Informasi Akun | 100% | ✔️ |
@@ -42,7 +32,7 @@ Include simple Data Table with Livewire (CRUD).
 | Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 100% | ✔️ |
 | Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 30% | ✖️ |
 | Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 60% | ✖️ |
-| Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 80% | ✖️ |
+| Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 100% | ✖️ |
 
 ### C. Process
 | Description | Progress | Complete |
@@ -57,36 +47,3 @@ Include simple Data Table with Livewire (CRUD).
 - Laravel (Backend)
 - Inertia.js (Frontend)
 - MySQL (Database)
-
-## What next?
-After clone or download this repository, next step is install all dependency required by laravel and laravel-mix.
-
-```shell
-# install composer-dependency
-$ composer install
-# install npm package
-$ npm install
-# build dev 
-$ npm run dev
-```
-
-Before we start web server make sure we already generate app key, configure `.env` file and do migration.
-
-```shell
-# create copy of .env
-$ cp .env.example .env
-# create laravel key
-$ php artisan key:generate
-# laravel migrate
-$ php artisan migrate
-```
-
-## How does it look?
-
-<p align="center">
-    <img src="https://telegra.ph/file/49c7571f06872948fb0bc.png" width="80%" height="auto" />
-    <img src="https://telegra.ph/file/613288c34841388c24f34.png" width="80%" height="auto" />
-    <img src="https://telegra.ph/file/7f893b085f7aaca5b91be.png" width="80%" height="auto" />
-    <img src="https://telegra.ph/file/8741e5fc455f02571b4c2.png" width="80%" height="auto" />
-</p>
-
