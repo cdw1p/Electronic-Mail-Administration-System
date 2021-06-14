@@ -38,6 +38,14 @@
         <!-- /Page Header -->
 
         <div class="row">
+          <div class="col-md-12">
+            @if ($message = Session::get('error'))
+              <div class="alert alert-danger" role="alert">{{ $message }}</div>
+            @endif
+            @if ($message = Session::get('success'))
+              <div class="alert alert-success" role="alert">{{ $message }}</div>
+            @endif
+          </div>
           <div class="col-sm-12">
             <div class="card card-table">
               <div class="card-body">
