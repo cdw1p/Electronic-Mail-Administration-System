@@ -34,13 +34,13 @@ Route::group(['middleware' => 'role:user'], function() {
 
 Route::group(['middleware' => 'role:admin'], function() {
   // Modul Meeting - Schedule
-  Route::get('/meeting/schedule', 'RoomController@index')->name('meeting.schedule.index');
-  Route::get('/meeting/schedule/create', 'RoomController@create')->name('meeting.schedule.create');
-  Route::post('/meeting/schedule/create', 'RoomController@store')->name('meeting.schedule.store');
-  Route::get('/meeting/schedule/edit/{id}', 'RoomController@edit')->name('meeting.schedule.edit');
-  Route::post('/meeting/schedule/edit/{id}', 'RoomController@update')->name('meeting.schedule.update');
-  Route::get('/meeting/schedule/stop/{id}', 'RoomController@stop')->name('meeting.schedule.stop');
-  Route::get('/meeting/schedule/delete/{id}', 'RoomController@delete')->name('meeting.schedule.delete');
+  Route::get('/meeting/schedule', 'MeetingScheduleController@index')->name('meeting.schedule.index');
+  Route::get('/meeting/schedule/create', 'MeetingScheduleController@create')->name('meeting.schedule.create');
+  Route::post('/meeting/schedule/create', 'MeetingScheduleController@store')->name('meeting.schedule.store');
+  Route::get('/meeting/schedule/edit/{id}', 'MeetingScheduleController@edit')->name('meeting.schedule.edit');
+  Route::post('/meeting/schedule/edit/{id}', 'MeetingScheduleController@update')->name('meeting.schedule.update');
+  Route::get('/meeting/schedule/stop/{id}', 'MeetingScheduleController@stop')->name('meeting.schedule.stop');
+  Route::get('/meeting/schedule/delete/{id}', 'MeetingScheduleController@delete')->name('meeting.schedule.delete');
 
   // Modul Users Management
   Route::get('/settings/users', 'SettingsUsersControllers@index')->name('settings.users.index');
