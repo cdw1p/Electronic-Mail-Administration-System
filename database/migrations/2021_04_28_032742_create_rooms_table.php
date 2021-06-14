@@ -18,6 +18,8 @@ class CreateRoomsTable extends Migration
             $table->string('name');
             $table->string('start_date');
             $table->string('end_date');
+            $table->string('zoom_id');
+            $table->string('zoom_link');
             $table->bigInteger('is_recording');
             $table->bigInteger('is_start_meeting');
             $table->bigInteger('is_join_before_host');
