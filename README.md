@@ -15,8 +15,8 @@ Electronic Mail Administration System - Tugas UAS PTW
 | Admin Dapat Melihat Data Meeting | 100% | ✖️ |
 | Admin Dapat Membuat Room Meeting | 100% | ✖️ |
 | Admin Dapat Memulai Room Meeting | 100% | ✖️ |
-| Admin Dapat Memberhentikan Room Meeting |10060% | ✖️ |
-| Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 10% | ✖️ |
+| Admin Dapat Memberhentikan Room Meeting |100% | ✖️ |
+| Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 30% | ✖️ |
 | User Dapat Bergabung Ke Room Meeting | 60% | ✖️ |
 | User Dapat Melihat Riwayat Meeting | 50% | ✖️ |
 | User Dapat Melakukan Absensi Sebagai Penanda Kehadiran Mengikuti Meeting | 0% | ✖️ |
