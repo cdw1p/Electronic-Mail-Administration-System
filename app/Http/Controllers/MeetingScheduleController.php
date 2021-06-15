@@ -12,6 +12,8 @@ use App\Models\Room;
 use App\Models\Invitation;
 use App\Models\Attendance;
 use Session;
+use QrCode;
+use PDF;
 
 class MeetingScheduleController extends Controller
 {
@@ -44,6 +46,26 @@ class MeetingScheduleController extends Controller
     } else {
       Session::flash('error', 'Maaf, status room meeting yang anda tuju sedang tidak aktif. Silahkan hubungi administrator!');
       return redirect()->route('meeting.schedule.users_index');
+    }
+  }
+
+  public function users_verify(Request $request) {
+    try {
+      $decryptParams = Crypt::decrypt($request->signature);
+      if ($decryptParams) {
+        $qrCodeGenerator = base64_encode(QrCode::format('svg')->size(100)->generate(Auth::user()->name));
+        $templateHTML = '
+          <h1>Contoh Sertifikat Kehadiran</h1><br/>
+          <h3>Dihadiri Oleh : '. Auth::user()->name .'</h3>
+          <h3>Nama Room Meeting : '. $decryptParams[0]->name .'</h3>
+          <img src="data:image/png;base64, '. $qrCodeGenerator .'">
+        ';
+        return PDF::loadHTML($templateHTML)->setPaper('a4', 'landscape')->setWarnings(false)->stream();
+      } else {
+        return redirect()->route('meeting.schedule.users_attendance');
+      }
+    } catch (DecryptException $e) {
+      return redirect()->route('meeting.schedule.users_attendance');
     }
   }
 

@@ -58,7 +58,7 @@
                         <td>{{ $v->name }}</td>
                         <td><span class="badge badge-pill bg-success-light">{{ $v->created_at }}</span></td>
                         <td class="text-center">
-                          <a href="#" class="btn btn-sm btn-white text-primary mr-2" onclick="joinConfirm('{{ $v->zoom_id }}')"><i class="fa fa-file-pdf mr-1"></i>Sertifikat Kehadiran</a> 
+                          <a href="{{ route('meeting.schedule.users_verify', $v->signature) }}" target="_BLANK" class="btn btn-sm btn-white text-primary mr-2"><i class="fa fa-file-pdf mr-1"></i>Sertifikat Kehadiran</a> 
                         </td>
                       </tr>
                     @endforeach
@@ -76,10 +76,4 @@
   <!-- /Main Wrapper -->
   <!-- Datatables JS -->
   @extends('layouts.footer')
-  <script>
-    function joinConfirm(data) {
-      $('#joinConfirm').modal('show')
-      $('#zoom_id').val(data)
-    }
-  </script>
 </html>
