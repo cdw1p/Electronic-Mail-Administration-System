@@ -2,11 +2,11 @@
 Electronic Mail Administration System - Tugas UAS PTW
 
 ## Features?
-- [ ] Auto generate QR Code For Mutiple Digital Signature
-- [ ] Meeting Scheduling, Sending Invitation, and The Presence of The Invitation
+- [x] Auto generate QR Code For Mutiple Digital Signature
+- [x] Meeting Scheduling, Sending Invitation, and The Presence of The Invitation
 - [ ] Incoming Mail Registration with Feedback Status
 - [ ] Outgoing Mail Registration with Progress Notification Status
-- [ ] Integrated Video Meeting with Recording and Controlling System
+- [x] Integrated Video Meeting with Recording and Controlling System
 
 ### A. Input
 | Description | Progress | Complete |
@@ -20,7 +20,7 @@ Electronic Mail Administration System - Tugas UAS PTW
 | User Dapat Bergabung Ke Room Meeting | 100% | ✔️ |
 | User Dapat Melihat Riwayat Meeting | 100% | ✔️ |
 | User Dapat Melakukan Absensi Sebagai Penanda Kehadiran Mengikuti Meeting | 100% | ✔️ |
-| User Dapat Mencetak E-Sertifikat Sebagai Bukti Kehadiran | 50% | ✔️ |
+| User Dapat Mencetak E-Sertifikat Sebagai Bukti Kehadiran | 100% | ✔️ |
 | User Dapat Merubah Informasi Akun | 100% | ✔️ |
 | User Dapat Melakukan Registrasi Online | 100% | ✔️ |
 
@@ -31,8 +31,8 @@ Electronic Mail Administration System - Tugas UAS PTW
 | Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 30% | ✖️ |
 | Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 100% | ✔️ |
 | Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 30% | ✖️ |
-| Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 60% | ✖️ |
-| Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 100% | ✖️ |
+| Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 100% | ✔️ |
+| Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 100% | ✔️ |
 
 ### C. Process
 | Description | Progress | Complete |
@@ -41,7 +41,7 @@ Electronic Mail Administration System - Tugas UAS PTW
 | Menyediakan Proses Login | 100% | ✔️ |
 | Menyediakan Proses Logout | 100% | ✔️ |
 | Menyediakan Proses Presensi | 100% | ✔️ |
-| Menyediakan Proses Video Meeting | 55% | ✖️ |
+| Menyediakan Proses Video Meeting | 100% | ✔️ |
 
 ## Framework & Tools ?
 - Laravel (Backend)
