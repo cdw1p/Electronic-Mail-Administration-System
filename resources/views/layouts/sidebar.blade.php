@@ -7,6 +7,13 @@
             <a href="{{ route('dashboard.index') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a>
           </li>
 
+          @if (Auth::user()->role === 'user')
+            <li {{ (request()->routeIs('meeting.schedule.users_index')) ? 'class=active' : '' }}>
+              <a href="{{ route('meeting.schedule.users_index') }}"><i class="fa fa-calendar"></i> <span>Jadwal Meeting</span></a>
+            </li>
+            <li><a href="#"><i class="fa fa-clock"></i> <span>Riwayat Presensi</span></a></li>
+          @endif
+
           @if (Auth::user()->role === 'admin')
             <li class="menu-title"><span>Modul Meeting</span></li>
             <li {{ (request()->routeIs('meeting.schedule.index') || request()->routeIs('meeting.schedule.create') || request()->routeIs('meeting.schedule.edit')) ? 'class=active' : '' }}>

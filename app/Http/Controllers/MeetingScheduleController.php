@@ -3,13 +3,42 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Auth;
 use \MacsiDigital\Zoom\Facades\Zoom;
 use Carbon\Carbon;
 use App\Models\Room;
+use App\Models\Invitation;
+use App\Models\Attendance;
 use Session;
 
 class MeetingScheduleController extends Controller
 {
+  public function users_index(Request $request) {
+    $query = Invitation::join('rooms', 'invitations.room_id', '=', 'rooms.zoom_id')
+            ->where('invitations.participants', 'like', '%' . Auth::user()->email . '%')
+            ->get();
+    return view('meeting/users_index', ['data' => $query]);
+  }
+
+  public function users_join(Request $request) {
+    $query = Invitation::join('rooms', 'invitations.room_id', '=', 'rooms.zoom_id')
+            ->where('participants', 'like', '%' . Auth::user()->email . '%')
+            ->where('rooms.is_start_meeting', '=', '1')
+            ->get();
+    if (count($query) > 0) {
+      $findAttendance = Attendance::where('id_rooms', $request->zoom_id)->where('email', Auth::user()->email)->get();
+      if (!($findAttendance)) {
+        Attendance::create([ 'id_rooms' => $request->zoom_id, 'email' => Auth::user()->email, 'signature' => Crypt::encrypt($query) ]);
+      }
+      return redirect($query[0]->zoom_link);
+    } else {
+      Session::flash('error', 'Maaf, status room meeting yang anda tuju sedang tidak aktif. Silahkan hubungi administrator!');
+      return redirect()->route('meeting.schedule.users_index');
+    }
+  }
+
   public function index(Request $request) {
     return view('meeting/schedule_index', ['data' => Room::all()]);
   }

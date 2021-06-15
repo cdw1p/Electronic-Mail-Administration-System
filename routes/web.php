@@ -27,6 +27,10 @@ Route::group(['middleware' => 'role:user'], function() {
   Route::get('/', 'DashboardController@index')->name('dashboard.index');
   Route::get('/logout', 'DashboardController@logout')->name('dashboard.logout');
 
+  // Modul Meeting - Users
+  Route::get('/meeting/users', 'MeetingScheduleController@users_index')->name('meeting.schedule.users_index');
+  Route::post('/meeting/join', 'MeetingScheduleController@users_join')->name('meeting.schedule.users_join');
+
   // Modul Profile
   Route::get('/profile', 'ProfileController@index')->name('profile.index');
   Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
