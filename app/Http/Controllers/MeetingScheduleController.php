@@ -22,6 +22,14 @@ class MeetingScheduleController extends Controller
     return view('meeting/users_index', ['data' => $query]);
   }
 
+  public function users_attendance(Request $request) {
+    $query = Room::select('rooms.name', 'attendances.signature', 'attendances.created_at')
+            ->join('attendances', 'rooms.zoom_id', '=', 'attendances.id_rooms')
+            ->where('attendances.email', '=', Auth::user()->email)
+            ->get();
+    return view('meeting/users_attendance', ['data' => $query]);
+  }
+
   public function users_join(Request $request) {
     $query = Invitation::join('rooms', 'invitations.room_id', '=', 'rooms.zoom_id')
             ->where('participants', 'like', '%' . Auth::user()->email . '%')

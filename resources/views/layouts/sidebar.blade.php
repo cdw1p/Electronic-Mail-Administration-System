@@ -11,7 +11,9 @@
             <li {{ (request()->routeIs('meeting.schedule.users_index')) ? 'class=active' : '' }}>
               <a href="{{ route('meeting.schedule.users_index') }}"><i class="fa fa-calendar"></i> <span>Jadwal Meeting</span></a>
             </li>
-            <li><a href="#"><i class="fa fa-clock"></i> <span>Riwayat Presensi</span></a></li>
+            <li {{ (request()->routeIs('meeting.schedule.users_attendance')) ? 'class=active' : '' }}>
+              <a href="{{ route('meeting.schedule.users_attendance') }}"><i class="fa fa-clock"></i> <span>Riwayat Presensi</span></a>
+            </li>
           @endif
 
           @if (Auth::user()->role === 'admin')

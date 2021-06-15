@@ -29,6 +29,7 @@ Route::group(['middleware' => 'role:user'], function() {
 
   // Modul Meeting - Users
   Route::get('/meeting/users', 'MeetingScheduleController@users_index')->name('meeting.schedule.users_index');
+  Route::get('/meeting/attendance', 'MeetingScheduleController@users_attendance')->name('meeting.schedule.users_attendance');
   Route::post('/meeting/join', 'MeetingScheduleController@users_join')->name('meeting.schedule.users_join');
 
   // Modul Profile
