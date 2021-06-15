@@ -3,8 +3,9 @@
   <title>Electronic Mail Administration System - Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <script type="text/javascript" src="/assets/js/bootstrap.min.js" async></script>
   <!-- Fontawesome CSS -->
   <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
@@ -19,7 +20,16 @@
   <style type="text/css">.preloader{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background-color:#fff}.preloader .loading{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:14px arial}</style>
   <!-- Preloader -->
   <script type='text/javascript'src="/assets/js/jquery-2.2.1.min.js"></script>
-  <script>$(document).ready(function() { $('.preloader').fadeOut() })</script>
+  <!-- Select2 -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/plugins/select2/select2.min.css">
+  <script src="/assets/plugins/select2/select2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.preloader').fadeOut();
+      $('.select-room-users').select2();
+    })
+  </script>
 </head>
 <!-- Preloader -->
 <div class="preloader">

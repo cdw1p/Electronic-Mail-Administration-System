@@ -44,6 +44,9 @@ Route::group(['middleware' => 'role:admin'], function() {
 
   // Modul Meeting - Invitation
   Route::get('/meeting/invitation', 'MeetingInvititationController@index')->name('meeting.invitation.index');
+  Route::post('/meeting/invitation/create', 'MeetingInvititationController@store')->name('meeting.invitation.store');
+  Route::get('/settings/users/delete/{id}', 'MeetingInvititationController@delete')->name('meeting.invitation.delete');
+  Route::get('/meeting/invitation/getParticipants/{id}', 'MeetingInvititationController@getParticipants')->name('meeting.invitation.getParticipants');
 
   // Modul Users Management
   Route::get('/settings/users', 'SettingsUsersControllers@index')->name('settings.users.index');

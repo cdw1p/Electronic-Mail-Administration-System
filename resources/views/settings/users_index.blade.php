@@ -63,20 +63,20 @@
                     <tbody>
                     @foreach($data as $v)
                       <tr>
-                          <td>{{ $v->name }}</td>
-                          <td>{{ $v->email }}</td>
-                          <td>{{ strtoupper($v->role) }}</td>
-                          <td>
-                            @if ($v->status)
-                              <span class="badge badge-pill bg-success-light">Aktif</span>
-                            @else
-                              <span class="badge badge-pill bg-danger-light">Tidak Aktif</span>
-                            @endif
-                          </td>
-                          <td class="text-center">
-                            <a href="{{ route('settings.users.edit', $v->email) }}" class="btn btn-sm btn-white text-success mr-2"><i class="far fa-edit mr-1"></i>Ubah</a> 
-                            <a href="{{ route('settings.users.delete', $v->email) }}" class="btn btn-sm btn-white text-danger mr-2"><i class="far fa-trash-alt mr-1"></i>Hapus</a>
-                          </td>
+                        <td>{{ $v->name }}</td>
+                        <td>{{ $v->email }}</td>
+                        <td>{{ strtoupper($v->role) }}</td>
+                        <td>
+                          @if ($v->status)
+                            <span class="badge badge-pill bg-success-light">Aktif</span>
+                          @else
+                            <span class="badge badge-pill bg-danger-light">Tidak Aktif</span>
+                          @endif
+                        </td>
+                        <td class="text-center">
+                          <a href="{{ route('settings.users.edit', $v->email) }}" class="btn btn-sm btn-white text-success mr-2"><i class="far fa-edit mr-1"></i>Ubah</a> 
+                          <a href="{{ route('settings.users.delete', $v->email) }}" class="btn btn-sm btn-white text-danger mr-2"><i class="far fa-trash-alt mr-1"></i>Hapus</a>
+                        </td>
                       </tr>
                     @endforeach
                     </tbody>

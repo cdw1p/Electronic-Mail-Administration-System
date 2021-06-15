@@ -3,7 +3,9 @@
       <div id="sidebar-menu" class="sidebar-menu">
         <ul>
           <li class="menu-title"><span>Main</span></li>
-          <li {{ request()->routeIs('dashboard.index') ? 'class=active' : '' }}><a href="{{ route('dashboard.index') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+          <li {{ (request()->routeIs('dashboard.index') || request()->routeIs('profile.index')) ? 'class=active' : '' }}>
+            <a href="{{ route('dashboard.index') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a>
+          </li>
 
           @if (Auth::user()->role === 'admin')
             <li class="menu-title"><span>Modul Meeting</span></li>
