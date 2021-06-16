@@ -24,8 +24,9 @@
             <li {{ (request()->routeIs('meeting.invitation.index') || request()->routeIs('meeting.invitation.create') || request()->routeIs('meeting.invitation.edit')) ? 'class=active' : '' }}>
               <a href="{{ route('meeting.invitation.index') }}"><i class="fa fa-user-plus"></i> <span>Undangan</span></a>
             </li>
-            <li><a href="#"><i class="fa fa-clock"></i> <span>Presensi</span></a></li>
-
+            <li {{ (request()->routeIs('meeting.schedule.admin_attendance')) ? 'class=active' : '' }}>
+              <a href="{{ route('meeting.schedule.admin_attendance') }}"><i class="fa fa-clock"></i> <span>Presensi</span></a>
+            </li>
             <li class="menu-title"><span>Pengaturan</span></li>
             <li {{ (request()->routeIs('settings.users.index') || request()->routeIs('settings.users.create') || request()->routeIs('settings.users.edit')) ? 'class=active' : '' }}>
               <a href="{{ route('settings.users.index') }}"><i class="fa fa-users"></i> <span>Master Pengguna</span></a>

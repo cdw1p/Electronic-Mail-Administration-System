@@ -17,6 +17,12 @@ use PDF;
 
 class MeetingScheduleController extends Controller
 {
+  public function admin_attendance(Request $request) {
+    $query = Attendance::select(Attendance::raw('count(attendances.id_rooms) as total_participants, rooms.name, rooms.start_date, rooms.zoom_id'))
+            ->join('rooms', 'attendances.id_rooms', '=', 'rooms.zoom_id')->get();
+    return view('meeting/admin_index', ['data' => $query]);
+  }
+
   public function users_index(Request $request) {
     $query = Invitation::join('rooms', 'invitations.room_id', '=', 'rooms.zoom_id')
             ->where('invitations.participants', 'like', '%' . Auth::user()->email . '%')
@@ -165,5 +171,12 @@ class MeetingScheduleController extends Controller
       Session::flash('error', 'Maaf, data meeting tidak dapat dihapus. Silahkan coba lagi!');
     }
     return redirect()->route('meeting.schedule.index');
+  }
+
+  public function getParticipants(Request $request) {
+    return Attendance::select('attendances.email', 'users.name')
+          ->join('users', 'attendances.email', '=', 'users.email')
+          ->where('id_rooms', $request->id)
+          ->get();
   }
 }

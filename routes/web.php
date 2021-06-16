@@ -29,8 +29,8 @@ Route::group(['middleware' => 'role:user'], function() {
 
   // Modul Meeting - Users
   Route::get('/meeting/users', 'MeetingScheduleController@users_index')->name('meeting.schedule.users_index');
-  Route::get('/meeting/attendance', 'MeetingScheduleController@users_attendance')->name('meeting.schedule.users_attendance');
-  Route::get('/meeting/verify/{signature}', 'MeetingScheduleController@users_verify')->name('meeting.schedule.users_verify');
+  Route::get('/meeting/users/attendance', 'MeetingScheduleController@users_attendance')->name('meeting.schedule.users_attendance');
+  Route::get('/meeting/users/verify/{signature}', 'MeetingScheduleController@users_verify')->name('meeting.schedule.users_verify');
   Route::post('/meeting/join', 'MeetingScheduleController@users_join')->name('meeting.schedule.users_join');
 
   // Modul Profile
@@ -53,6 +53,10 @@ Route::group(['middleware' => 'role:admin'], function() {
   Route::post('/meeting/invitation/create', 'MeetingInvititationController@store')->name('meeting.invitation.store');
   Route::post('/meeting/invitation/delete', 'MeetingInvititationController@delete')->name('meeting.invitation.delete');
   Route::get('/meeting/invitation/getParticipants/{id}', 'MeetingInvititationController@getParticipants')->name('meeting.invitation.getParticipants');
+
+  // Modul Meeting - Attendance
+  Route::get('/meeting/attendance', 'MeetingScheduleController@admin_attendance')->name('meeting.schedule.admin_attendance');
+  Route::get('/meeting/attendance/getParticipants/{id}', 'MeetingScheduleController@getParticipants')->name('meeting.schedule.getParticipants');
 
   // Modul Users Management
   Route::get('/settings/users', 'SettingsUsersControllers@index')->name('settings.users.index');
