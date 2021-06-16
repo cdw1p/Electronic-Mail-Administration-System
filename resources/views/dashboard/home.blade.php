@@ -17,7 +17,7 @@
     <div id="app" class="page-wrapper">
       <div class="content container-fluid">
         <div class="row">
-          <div class="col-xl-3 col-sm-6 col-12">
+          <div class="col-xl-4 col-sm-6 col-12">
             <div class="card">
               <div class="card-body">
                 <div class="dash-widget-header">
@@ -27,14 +27,14 @@
                   <div class="dash-count">
                     <div class="dash-title">Total Vidcon</div>
                     <div class="dash-counts">
-                      <p>0</p>
+                      <p>{{ $data['total_vidcon'] }}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-sm-6 col-12">
+          <div class="col-xl-4 col-sm-6 col-12">
             <div class="card">
               <div class="card-body">
                 <div class="dash-widget-header">
@@ -44,14 +44,14 @@
                   <div class="dash-count">
                     <div class="dash-title">Total Pengguna</div>
                     <div class="dash-counts">
-                      <p>0</p>
+                      <p>{{ $data['total_users'] }}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-sm-6 col-12">
+          <div class="col-xl-4 col-sm-6 col-12">
             <div class="card">
               <div class="card-body">
                 <div class="dash-widget-header">
@@ -61,24 +61,7 @@
                   <div class="dash-count">
                     <div class="dash-title">Total Presensi</div>
                     <div class="dash-counts">
-                      <p>0</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card">
-              <div class="card-body">
-                <div class="dash-widget-header">
-                  <span class="dash-widget-icon bg-4">
-                    <i class="fas fa-envelope"></i>
-                  </span>
-                  <div class="dash-count">
-                    <div class="dash-title">Total SMTP</div>
-                    <div class="dash-counts">
-                      <p>0</p>
+                      <p>{{ $data['total_attendance'] }}</p>
                     </div>
                   </div>
                 </div>
