@@ -144,10 +144,10 @@ class MeetingScheduleController extends Controller
   }
 
   public function stop(Request $request) {
-    $findData = Zoom::user()->first()->meetings()->find($request->id);
+    $findData = Zoom::user()->first()->meetings()->find($request->zoom_id);
     if ($findData) {
-      Zoom::user()->first()->meetings()->find($request->id)->endMeeting();
-      Room::where('zoom_id', $request->id)->update([ 'is_start_meeting' => 0 ]);
+      Zoom::user()->first()->meetings()->find($request->zoom_id)->endMeeting();
+      Room::where('zoom_id', $request->zoom_id)->update([ 'is_start_meeting' => 0 ]);
       Session::flash('success', 'Selamat, data meeting berhasil diberhentikan pada server!');
     } else {
       Session::flash('error', 'Maaf, data meeting tidak dapat diberhentikan. Silahkan coba lagi!');
@@ -156,10 +156,10 @@ class MeetingScheduleController extends Controller
   }
 
   public function delete(Request $request) {
-    $findData = Zoom::user()->first()->meetings()->find($request->id);
+    $findData = Zoom::user()->first()->meetings()->find($request->zoom_id);
     if ($findData) {
-      Zoom::user()->first()->meetings()->find($request->id)->delete();
-      Room::where('zoom_id', $request->id)->delete();
+      Zoom::user()->first()->meetings()->find($request->zoom_id)->delete();
+      Room::where('zoom_id', $request->zoom_id)->delete();
       Session::flash('success', 'Selamat, data meeting berhasil dihapus pada database server!');
     } else {
       Session::flash('error', 'Maaf, data meeting tidak dapat dihapus. Silahkan coba lagi!');

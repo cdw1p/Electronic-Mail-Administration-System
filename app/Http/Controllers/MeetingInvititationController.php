@@ -39,7 +39,7 @@ class MeetingInvititationController extends Controller
   }
 
   public function delete(Request $request) {
-    $deleteData = Invitation::where('room_id', $request->id)->delete();
+    $deleteData = Invitation::where('room_id', $request->zoom_id)->delete();
     if ($deleteData) {
       Session::flash('success', 'Selamat, data undangan berhasil dihapus pada database server!');
     } else {

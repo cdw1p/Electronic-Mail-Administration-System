@@ -114,6 +114,32 @@
         </div>
         <!-- /List Participant -->
 
+        <!-- Confirm Delete -->
+        <div class="modal" id="deleteConfirm" tabindex="-1" role="dialog" aria-labelledby="deleteConfirm" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <form action="{{ route('meeting.invitation.delete') }}" method="POST">
+              {!! csrf_field() !!}
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Untuk Menghapus</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <input class="zoom_id_delete" type="hidden" id="zoom_id" name="zoom_id">
+                  <p>Apakah anda yakin ingin menghapus undangan meeting ?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Ya, Lanjutkan</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- /Confirm Delete -->
+
         <div class="row">
           <div class="col-md-12">
             @if ($message = Session::get('error'))
@@ -152,7 +178,7 @@
                         </td>
                         <td class="text-center">
                           <a href="#" class="btn btn-sm btn-white text-primary mr-2" onclick="fetchParticipantsList('{{ $v->zoom_id }}')"><i class="far fa-eye mr-1"></i>Lihat Peserta</a> 
-                          <a href="{{ route('meeting.invitation.delete', $v->zoom_id) }}" class="btn btn-sm btn-white text-danger mr-2"><i class="far fa-trash-alt mr-1"></i>Hapus</a>
+                          <a href="#" class="btn btn-sm btn-white text-danger mr-2" onclick="deleteConfirm('{{ $v->zoom_id }}')"><i class="far fa-trash-alt mr-1"></i>Hapus</a>
                         </td>
                       </tr>
                     @endforeach
@@ -200,6 +226,10 @@
             $('#dataListParticipants').append(`<tr><td>${dataList.split('|')[1]}</td><td>${dataList.split('|')[0]}</td></tr>`)
           }
         })
+    }
+    function deleteConfirm(data) {
+      $('#deleteConfirm').modal('show')
+      $('.zoom_id_delete').val(data)
     }
   </script>
 </html>

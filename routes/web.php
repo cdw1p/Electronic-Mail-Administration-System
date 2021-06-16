@@ -45,13 +45,13 @@ Route::group(['middleware' => 'role:admin'], function() {
   Route::post('/meeting/schedule/create', 'MeetingScheduleController@store')->name('meeting.schedule.store');
   Route::get('/meeting/schedule/edit/{id}', 'MeetingScheduleController@edit')->name('meeting.schedule.edit');
   Route::post('/meeting/schedule/edit/{id}', 'MeetingScheduleController@update')->name('meeting.schedule.update');
-  Route::get('/meeting/schedule/stop/{id}', 'MeetingScheduleController@stop')->name('meeting.schedule.stop');
-  Route::get('/meeting/schedule/delete/{id}', 'MeetingScheduleController@delete')->name('meeting.schedule.delete');
+  Route::post('/meeting/schedule/stop', 'MeetingScheduleController@stop')->name('meeting.schedule.stop');
+  Route::post('/meeting/schedule/delete', 'MeetingScheduleController@delete')->name('meeting.schedule.delete');
 
   // Modul Meeting - Invitation
   Route::get('/meeting/invitation', 'MeetingInvititationController@index')->name('meeting.invitation.index');
   Route::post('/meeting/invitation/create', 'MeetingInvititationController@store')->name('meeting.invitation.store');
-  Route::get('/settings/users/delete/{id}', 'MeetingInvititationController@delete')->name('meeting.invitation.delete');
+  Route::post('/meeting/invitation/delete', 'MeetingInvititationController@delete')->name('meeting.invitation.delete');
   Route::get('/meeting/invitation/getParticipants/{id}', 'MeetingInvititationController@getParticipants')->name('meeting.invitation.getParticipants');
 
   // Modul Users Management
@@ -59,8 +59,8 @@ Route::group(['middleware' => 'role:admin'], function() {
   Route::get('/settings/users/create', 'SettingsUsersControllers@create')->name('settings.users.create');
   Route::post('/settings/users/create', 'SettingsUsersControllers@store')->name('settings.users.store');
   Route::get('/settings/users/edit/{email}', 'SettingsUsersControllers@edit')->name('settings.users.edit');
-  Route::post('/settings/users/edit/{email}', 'SettingsUsersControllers@update')->name('settings.users.update');
-  Route::get('/settings/users/delete/{email}', 'SettingsUsersControllers@delete')->name('settings.users.delete');
+  Route::post('/settings/users/edit', 'SettingsUsersControllers@update')->name('settings.users.update');
+  Route::post('/settings/users/delete', 'SettingsUsersControllers@delete')->name('settings.users.delete');
 
   // Modul Aplikasi
   Route::get('/settings/app', 'SettingsAppControllers@index')->name('settings.app.index');

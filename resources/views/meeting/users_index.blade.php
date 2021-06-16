@@ -55,7 +55,7 @@
             </form>
           </div>
         </div>
-        <!-- /List Participant -->
+        <!-- /Confirm Join -->
 
         <div class="row">
           <div class="col-md-12">
