@@ -19,8 +19,13 @@ class MeetingScheduleController extends Controller
 {
   public function admin_attendance(Request $request) {
     $query = Attendance::select(Attendance::raw('count(attendances.id_rooms) as total_participants, rooms.name, rooms.start_date, rooms.zoom_id'))
-            ->join('rooms', 'attendances.id_rooms', '=', 'rooms.zoom_id')->get();
-    return view('meeting/admin_index', ['data' => $query]);
+            ->join('rooms', 'attendances.id_rooms', '=', 'rooms.zoom_id')
+            ->get();
+    if ($query[0]->total_participants === 0) {
+      return view('meeting/admin_index', ['data' => []]);
+    } else {
+      return view('meeting/admin_index', ['data' => $query]);
+    }
   }
 
   public function users_index(Request $request) {
@@ -45,7 +50,7 @@ class MeetingScheduleController extends Controller
             ->get();
     if (count($query) > 0) {
       $findAttendance = Attendance::where('id_rooms', $request->zoom_id)->where('email', Auth::user()->email)->get();
-      if (!($findAttendance)) {
+      if (count($findAttendance) < 1) {
         Attendance::create([ 'id_rooms' => $request->zoom_id, 'email' => Auth::user()->email, 'signature' => Crypt::encrypt($query) ]);
       }
       return redirect($query[0]->zoom_link);
