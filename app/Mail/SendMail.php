@@ -27,7 +27,7 @@ class SendMail extends Mailable
      * @return $this
      */
     public function build() {
-        return $this->from('noreply@my-email.com')->view('email/template')->with([
+        return $this->subject('Verifikasi & Aktivasi Email Anda')->view('email/template')->with([
             'name' => $this->name,
             'link' => $this->link
         ]);
