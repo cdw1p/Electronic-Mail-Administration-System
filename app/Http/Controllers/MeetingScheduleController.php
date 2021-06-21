@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use \MacsiDigital\Zoom\Facades\Zoom;
 use Carbon\Carbon;
 use App\Models\Room;
@@ -51,6 +52,10 @@ class MeetingScheduleController extends Controller
     if (count($query) > 0) {
       $findAttendance = Attendance::where('id_rooms', $request->zoom_id)->where('email', Auth::user()->email)->get();
       if (count($findAttendance) < 1) {
+        $email = Auth::user()->email;
+        Mail::raw('Anda telah berhasil menghadiri meeting dengan zoom id "'. $request->zoom_id .'".', function($msg) use ($email) {
+          $msg->subject('Notifikasi Kehadiran Meeting!')->to($email);
+        });
         Attendance::create([ 'id_rooms' => $request->zoom_id, 'email' => Auth::user()->email, 'signature' => Crypt::encrypt($query) ]);
       }
       return redirect($query[0]->zoom_link);
