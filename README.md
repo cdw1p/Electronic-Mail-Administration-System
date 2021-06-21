@@ -4,8 +4,8 @@ Electronic Mail Administration System - Tugas UAS PTW
 ## Features?
 - [x] Auto generate QR Code For Mutiple Digital Signature
 - [x] Meeting Scheduling, Sending Invitation, and The Presence of The Invitation
-- [ ] Incoming Mail Registration with Feedback Status
-- [ ] Outgoing Mail Registration with Progress Notification Status
+- [x] Incoming Mail Registration with Feedback Status
+- [x] Outgoing Mail Registration with Progress Notification Status
 - [x] Integrated Video Meeting with Recording and Controlling System
 
 ### A. Input
@@ -16,7 +16,7 @@ Electronic Mail Administration System - Tugas UAS PTW
 | Admin Dapat Membuat Room Meeting | 100% | ✔️ |
 | Admin Dapat Memulai Room Meeting | 100% | ✔️ |
 | Admin Dapat Memberhentikan Room Meeting |100% | ✔️ |
-| Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 80% | ✖️ |
+| Admin Dapat Mengirimkan Undangan Meeting Ke User Pengguna | 100% | ✔️ |
 | User Dapat Bergabung Ke Room Meeting | 100% | ✔️ |
 | User Dapat Melihat Riwayat Meeting | 100% | ✔️ |
 | User Dapat Melakukan Absensi Sebagai Penanda Kehadiran Mengikuti Meeting | 100% | ✔️ |
