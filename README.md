@@ -48,6 +48,7 @@ Electronic Mail Administration System - Tugas UAS PTW
 - Inertia.js (Frontend)
 - MySQL (Database)
 
+
 ## Screenshoot
 | Autentikasi - Login	| Autentikasi - Registrasi |
 | ------------ | ------------ |
@@ -60,6 +61,10 @@ Electronic Mail Administration System - Tugas UAS PTW
 | Meeting - List Data | Meeting - Tambah Data | Meeting - Ubah Data |
 | ------------ | ------------ | ------------ |
 |![MeetingList](/screenshoot/meeting-list.png)|![MeetingTambah](/screenshoot/meeting-tambah.png)|![MeetingUbah](/screenshoot/meeting-ubah-data.png)|
+
+| Undangan - List Data | Undangan - Tambah / Edit Partisipan |
+| ------------ | ------------ |
+|![UndanganList](/screenshoot/undangan-list.png)|![UndanganAddEdit](/screenshoot/undangan-tambah-peserta.png)|
 
 | Presensi - List Data | Presensi - Daftar Partisipan |
 | ------------ | ------------ |
