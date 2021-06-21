@@ -68,7 +68,7 @@
                           <label>Tambahkan Pengguna</label>
                           <select style="width: 100%;" class="select-room-users form-control" id="participants" name="participants[]" multiple="multiple" required />
                             @foreach($dataUser as $dataU)
-                              <option value="{{ $dataU->email }}|{{ $dataU->name }}">{{ $dataU->name }}</option>
+                              <option value="{{ $dataU->user_telegram }}|{{ $dataU->email }}|{{ $dataU->name }}">{{ $dataU->name }}</option>
                             @endforeach
                           </select>
                         </div>
@@ -205,9 +205,9 @@
           if (data.length > 0) {
             $('#participants').empty()
             for (users of dataUsers) {
-              const { email, name } = users
-              const formatEmailName = `${email}|${name}`
-              if (JSON.parse(data[0].participants).filter(data => data.split('|')[0] === email).length > 0) {
+              const { user_telegram, email, name } = users
+              const formatEmailName = `${user_telegram}|${email}|${name}`
+              if (JSON.parse(data[0].participants).filter(data => data.split('|')[1] === email).length > 0) {
                 $('#participants').append($(`<option value="${formatEmailName}" selected>${name}</option>`))
               } else {
                 $('#participants').append($(`<option value="${formatEmailName}">${name}</option>`))

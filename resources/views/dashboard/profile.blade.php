@@ -56,6 +56,12 @@
                           <input type="text" class="form-control" id="email" name="email" value="{{ $data->email }}" required />
                         </div>
                       </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>ID Telegram</label>
+                          <input type="text" class="form-control" id="user_telegram" name="user_telegram" value="{{ $data->user_telegram }}" placeholder="(Opsional)" />
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-6">
                       <div class="col-md-12">
@@ -87,6 +93,5 @@
     <!-- /Page Wrapper -->
   </div>
   <!-- /Main Wrapper -->
-  <!-- Datatables JS -->
   @extends('layouts.footer')
 </html>

@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('role');
             $table->bigInteger('status');
+            $table->string('user_telegram')->nullable();
             $table->string('remember_token')->nullable();
             $table->timestamps();
         });

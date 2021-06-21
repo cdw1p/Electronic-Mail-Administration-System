@@ -179,7 +179,7 @@ class MeetingScheduleController extends Controller
   }
 
   public function getParticipants(Request $request) {
-    return Attendance::select('attendances.email', 'users.name')
+    return Attendance::select('attendances.email', 'users.name', 'users.user_telegram')
           ->join('users', 'attendances.email', '=', 'users.email')
           ->where('id_rooms', $request->id)
           ->get();

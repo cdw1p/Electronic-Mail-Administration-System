@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use \MacsiDigital\Zoom\Facades\Zoom;
 use Carbon\Carbon;
 use App\Models\Room;
@@ -16,11 +17,25 @@ class MeetingInvititationController extends Controller
     return view('meeting/invitation_index', [
       'data' => Invitation::join('rooms', 'rooms.zoom_id', 'invitations.room_id')->get(),
       'dataRoom' => Room::select('name', 'zoom_id')->get(),
-      'dataUser' => User::select('name', 'email')->where('role', 'user')->where('status', 1)->get()
+      'dataUser' => User::select('name', 'email', 'user_telegram')->where('role', 'user')->where('status', 1)->get()
     ]);
   }
 
   public function store(Request $request) {
+    $roomData = Room::where('zoom_id', $request->room_id)->first();
+    foreach ($request->participants as $value) {
+      $splitValue = explode('|', $value);
+      $message = 'Halo '. $splitValue[2] .', anda di undang dalam acara "'. $roomData->name .'" yang akan diselanggarakan pada pukul '. $roomData->start_date .'. Link Zoom : ' .  $roomData->zoom_link;
+      if (count($splitValue) > 2 && $splitValue[0]) {
+        // Sent Message to Telegram
+        $telegramId = $splitValue[0];
+        $telegramSend = Http::get('https://api.telegram.org/bot' . env('TELEGRAM_BOT_TOKEN') . '/sendMessage?chat_id=' . $telegramId .'&parse_mode=Markdown&text=' . $message);
+      } else {
+        // Sent Message to Email
+      }
+    }
+    return $request->participants;
+
     $findData = Invitation::where('room_id', $request->room_id)->first();
     if ($findData) {
       Invitation::where('room_id', $request->room_id)->update([
