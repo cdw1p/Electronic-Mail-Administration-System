@@ -27,10 +27,10 @@ Electronic Mail Administration System - Tugas UAS PTW
 ### B. Output
 | Description | Progress | Complete |
 | --- | --- | --- |
-| Sistem Dapat Mengirim Notifikasi Absensi Ke User Yang Bersangkutan Melalui Email | 30% | ✖️ |
-| Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 30% | ✖️ |
+| Sistem Dapat Mengirim Notifikasi Absensi Ke User Yang Bersangkutan Melalui Email | 100% | ✔️ |
+| Sistem Dapat Mengirim Notifikasi Kepada User Yang Bergabung Pada Video Meeting | 100% | ✔️ |
 | Sistem Dapat Mengirim Link Verifikasi Untuk Melakukan Aktivasi Pada Akun Pengguna | 100% | ✔️ |
-| Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 30% | ✖️ |
+| Sistem Dapat Mengirimkan Notifikasi Pengingat Kepada Pengguna Terkait Meeting Yang Sebentar Lagi Dimulai | 80% | ✖️ |
 | Sistem Dapat Menghasilkan QR Code Sebagai Tanda Tangan Digital Untuk Sertifikat Kehadiran | 100% | ✔️ |
 | Sistem Terintegrasi Dengan Zoom Sebagai Perangkat Lunak Penyedia Layanan Video Conference | 100% | ✔️ |
 
