@@ -47,3 +47,24 @@ Electronic Mail Administration System - Tugas UAS PTW
 - Laravel (Backend)
 - Inertia.js (Frontend)
 - MySQL (Database)
+
+## Screenshoot
+| Autentikasi - Login	| Autentikasi - Registrasi |
+| ------------ | ------------ |
+|![Login](/screenshoot/autentikasi-login.png)|![Register](/screenshoot/autentikasi-registrasi.png)|
+
+| Dashboard - Home	| Dashboard - Edit Profile |
+| ------------ | ------------ |
+|![Home](/screenshoot/dashboard-home.png)|![EditProfile](/screenshoot/dashboard-edit-profile.png)|
+
+| Meeting - List Data | Meeting - Tambah Data | Meeting - Ubah Data |
+| ------------ | ------------ | ------------ |
+|![MeetingList](/screenshoot/meeting-list.png)|![MeetingTambah](/screenshoot/meeting-tambah.png)|![MeetingUbah](/screenshoot/meeting-ubah-data.png)|
+
+| Presensi - List Data | Presensi - Daftar Partisipan |
+| ------------ | ------------ |
+|![PresensiList](/screenshoot/presensi-list.png)|![PresensiPartisipan](/screenshoot/presensi-daftar-partisipan.png)|
+
+| Master - Pengguna	| Master - Aplikasi |
+| ------------ | ------------ |
+|![MasterPengguna](/screenshoot/master-pengguna.png)|![MasterAplikasi](/screenshoot/master-aplikasi.png)|
