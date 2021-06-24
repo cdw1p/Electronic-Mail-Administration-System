@@ -63,7 +63,7 @@ Route::group(['middleware' => 'role:admin'], function() {
   Route::get('/settings/users/create', 'SettingsUsersControllers@create')->name('settings.users.create');
   Route::post('/settings/users/create', 'SettingsUsersControllers@store')->name('settings.users.store');
   Route::get('/settings/users/edit/{email}', 'SettingsUsersControllers@edit')->name('settings.users.edit');
-  Route::post('/settings/users/edit', 'SettingsUsersControllers@update')->name('settings.users.update');
+  Route::post('/settings/users/edit/{email}', 'SettingsUsersControllers@update')->name('settings.users.update');
   Route::post('/settings/users/delete', 'SettingsUsersControllers@delete')->name('settings.users.delete');
 
   // Modul Aplikasi
